@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "nodemon server/server.js --ignore components",
     "build": "webpack --config webpack.config.js",
-    "start": "npm run build && npm run serve"
+    "start": "npm run serve"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,11 @@
     "express": "^4.13.4",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "webpack": "^1.12.13"
+    "webpack": "^1.12.13",
+    "webpack-dev-middleware": "^1.10.2",
+    "webpack-hot-middleware": "^2.18.0"
+  },
+  "devDependencies": {
+    "babel-preset-react-hmre": "^1.1.1"
   }
 }
