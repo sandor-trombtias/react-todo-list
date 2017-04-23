@@ -1,0 +1,23 @@
+.input {
+    border: 2px solid #aa4bfd;
+    border-radius: 10px;
+    padding: 10px;
+}
+.btn {
+    background: #6e4bfc;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    transition: background 0.25s ease;
+    border: none;
+}
+
+.btn:active {
+    background: #224bad;
+    text-decoration: none;
+}
