@@ -10,8 +10,11 @@ class App extends Component {
     return (
       <div className={style.app}>
         <h1> TodoList</h1>
-        <TodoInput/>
-        <TodoList todos={this.props.todos} />
+        <TodoInput dispatch={this.props.dispatch} />
+        <TodoList
+          dispatch={this.props.dispatch}
+          todos={this.props.todos}
+        />
       </div>
     );
   }

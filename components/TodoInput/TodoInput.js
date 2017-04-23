@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import actions from '../../redux/actions'
 import style from './style.css';
 class TextInput extends Component {
   constructor(props, context) {
@@ -11,7 +12,8 @@ class TextInput extends Component {
   }
   handleSubmit(e) {
     e.preventDefault()
-    console.log('submit button pressed')
+    this.props.dispatch(actions.addTodo(this.state.inputText));
+    this.setState({inputText: ''});
   }
   render() {
     return (
