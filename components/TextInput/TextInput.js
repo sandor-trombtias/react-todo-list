@@ -3,11 +3,14 @@ import TextDisplay from '../TextDisplay/TextDisplay'
 class TextInput extends Component {
   constructor(props, context) {
     super(props, context);
-    this.state={inputText: 'asd'};
+    this.state={inputText: 'initial text'};
   }
   handleChange(event) {
     console.log(event.target.value);
     this.setState({inputText: event.target.value});
+  }
+  deleteLetter() {
+    this.setState({inputText: this.state.inputText.substr(0, this.state.inputText.length - 1)})
   }
   render() {
     return (
@@ -17,7 +20,7 @@ class TextInput extends Component {
                value={this.state.inputText}
                onChange={this.handleChange.bind(this)}
         />
-        <TextDisplay text={this.state.inputText}/>
+        <TextDisplay text={this.state.inputText} delete={this.deleteLetter.bind(this)}/>
       </div>
     );
   }
